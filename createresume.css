@@ -1,0 +1,23 @@
+#Resume-form{
+    background-color: floralwhite;
+  }
+  
+  #Resume-template{
+      display:none;
+      
+  } 
+  
+  .myimg{
+      /* border: 1px solid red;*/
+       border-radius: 50%;
+       width: 200px;
+   }
+   
+   .body{
+       margin: auto;
+   }
+   
+   .background{
+       background-color: rgb(206, 241, 221);
+   }
+  
