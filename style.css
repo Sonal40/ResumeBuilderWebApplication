@@ -1,105 +1,125 @@
 *{
+    padding: 0;
     margin: 0;
-   padding: 0;
-}
-
-.logo{
-   width: 20%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.logo img{
-   width: 100%;
-   border: 3px solid white;
-   border-radius: 50px;
-}
-.navbar{
-  display: flex;
-}
-
-.nav-list{
-   width: 50%;
-   background-color: rgb(189, 134, 108);
-   display: flex;
-   /*justify-content: center;*/
-   align-items: center;
-}
-
-.nav-list li{
-    list-style: none;
-    padding: 26px   36px;
-}
-
-.nav-list li a{
     text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
 }
 
-.nav-list li a:hover{
-   text-decoration: none;
-   color: black;
+body{
+    font-family: monospace;
+
 }
 
-.rightnav{
-    background-color: rgb(189, 134, 108);
-    width: 50%;
-    text-align: center;
-   
+nav{
+  background: #0082e6;  
+  height: 80px;
+  width: 100%;
+
 }
 
-#search{
-   padding: 5px;
-   font-size: 20px;
-   border: 3px solid gray;
-   border-radius: 9px;
+nav ul{
+    float: right;
+    margin-right: 20px;
+
 }
 
-.background{
-   background:rgba(0, 0, 0,0.7) url('https://www.roberthalf.com/sites/default/files/2017-12/how-to-write-a-resume-rh-12-2017.jpg');
-   background-size: cover;
-  
+nav ul li{
+    display: inline-block;
+    line-height:80px ;
+    margin: 0 5px;
 }
 
-.firstSection{
-   height: 100vh;
+nav ul li a{
+    color: azure;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+
 }
 
-.box-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    max-width: 50%;
-    margin: auto;
+a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
 }
 
-.firstHalf{
-     width: 80%;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     
+.checkbtn{
+    font-size: 30px;
+    color: azure;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
 
-.secondhalf{
-   width: 30%;
+#check{
+    display: none;
 }
 
-.secondhalf img{
-   width: 100%;
-   display: block;
-   margin: auto;
+@media (max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+
+
+nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+
+nav ul li a{
+    font-size: 20px;
+}
+
+a:hover,a.active{
+    background: none;
+    color: #0082e6 ;
+}
+
+#check:checked ~ul{
+    left: 0;
+}
+}
+
+section{
+    background: url('https://www.biospace.com/getasset/78e13d07-f04b-477f-8f94-65d3556dcd35/') no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+
 }
 
 .text-big{
-   font-size: 45px;
-   color: black;
-}
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    margin: auto;
+    padding: 10%;
+ }
 
-.text-small{
-   font-size: 25px;
-   color : rgb(68, 1, 51);
-}
-
+ .text-small{
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    padding: 10%;
+ }
